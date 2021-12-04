@@ -1,0 +1,36 @@
+
+@startuml
+title  Packaging part
+
+'https://tiny.amazon.com/vjm4xbw7/plancorpamazplanformencohtml
+
+class Packaging {
+  -material: Material
+  +getMass(): BigDecimal
+  +canFitItem(Item): boolean
+}
+
+class PolyBag {
+  -volume: BigDecimal
+  +getMass(): BigDecimal
+  +canFitItem(Item): boolean
+}
+
+class Box {
+  -length: BigDecimal
+  -width: BigDecimal
+  -height: BigDecimal
+  +getMass(): BigDecimal
+  +canFitItem(Item): boolean
+}
+
+enum Material {
+  + CORRUGATE
+  + LAMINATED_PLASTIC
+  }
+
+
+Packaging *- Material
+Packaging <|-- PackagingBox
+Packaging <|-- PackagingPolyBag
+@enduml

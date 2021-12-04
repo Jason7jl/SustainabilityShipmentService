@@ -1,9 +1,6 @@
 package com.amazon.ata.datastore;
 
-import com.amazon.ata.types.FcPackagingOption;
-import com.amazon.ata.types.FulfillmentCenter;
-import com.amazon.ata.types.Material;
-import com.amazon.ata.types.Packaging;
+import com.amazon.ata.types.*;
 
 import java.math.BigDecimal;
 import java.util.Arrays;
@@ -31,13 +28,15 @@ public class PackagingDatastore {
             createFcPackagingOption("PDX1", Material.CORRUGATE, "60", "60", "60")
     );
 
+
     /**
      * Create fulfillment center packaging option from provided parameters.
      */
     private FcPackagingOption createFcPackagingOption(String fcCode, Material material,
                                                       String length, String width, String height) {
+        // we create instance fulfilment service and pass param. fcCode
         FulfillmentCenter fulfillmentCenter = new FulfillmentCenter(fcCode);
-        Packaging packaging = new Packaging(material, new BigDecimal(length), new BigDecimal(width),
+        Packaging packaging = new Box(material, new BigDecimal(length), new BigDecimal(width),
                 new BigDecimal(height));
 
         return new FcPackagingOption(fulfillmentCenter, packaging);
