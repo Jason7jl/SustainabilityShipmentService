@@ -50,11 +50,14 @@ public class Box extends Packaging {
         return height;
     }
 
+    @Override
     public boolean canFitItem(Item item) {
         return this.length.compareTo(item.getLength()) > 0 &&
                 this.width.compareTo(item.getWidth()) > 0 &&
                 this.height.compareTo(item.getHeight()) > 0;
     }
+
+    @Override
     public BigDecimal getMass() {
         BigDecimal two = BigDecimal.valueOf(2);
 
