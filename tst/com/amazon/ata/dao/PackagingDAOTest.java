@@ -28,6 +28,20 @@ class PackagingDAOTest {
     private PackagingDAO packagingDAO;
 
     @Test
+    public void findShipmentOptions_anyPackagingAvailableAndFits_singlePackaging() throws Exception {
+        // GIVEN
+        packagingDAO = new PackagingDAO(datastore);
+
+        // WHEN
+        List<ShipmentOption> shipmentOptions = packagingDAO.findShipmentOptions(smallItem, iad2);
+
+        // THEN
+        assertEquals(3, shipmentOptions.size(),
+                "When fulfillment center has packaging that can fit item, return a ShipmentOption with the item, "
+                        + "fulfillment center, and packaging that can fit the item.");
+    }
+
+    @Test
     public void findShipmentOptions_unknownFulfillmentCenter_throwsUnknownFulfillmentCenterException() {
         // GIVEN
         packagingDAO = new PackagingDAO(datastore);

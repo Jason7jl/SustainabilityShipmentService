@@ -46,7 +46,7 @@ class PackagingDatastoreTest {
         // GIVEN
         PackagingDatastore packagingDatastore = new PackagingDatastore();
         List<FcPackagingOption> expectedPackagingOptions = Arrays.asList(ind1_10Cm, abe2_20Cm, abe2_40Cm, yow4_10Cm,
-                yow4_20Cm, yow4_60Cm, iad2_20Cm, iad2_20Cm, pdx1_40Cm, pdx1_60Cm, pdx1_60Cm);
+                yow4_20Cm, yow4_60Cm, iad2_20Cm, iad2_20Cm, pdx1_40Cm, pdx1_60Cm, pdx1_60Cm, pdx1_60Cm,pdx1_60Cm);
 
         // WHEN
         List<FcPackagingOption> fcPackagingOptions = packagingDatastore.getFcPackagingOptions();
