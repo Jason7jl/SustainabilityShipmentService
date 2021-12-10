@@ -5,12 +5,12 @@ import java.util.Objects;
 
 /**
  * Represents a packaging option.
- *
+ * <p>
  * This packaging supports standard boxes, having a length, width, and height.
  * Items can fit in the packaging so long as their dimensions are all smaller than
  * the packaging's dimensions.
  */
-     public abstract class Packaging {
+public abstract class Packaging {
     /**
      * The material this packaging is made of.
      */
@@ -18,6 +18,7 @@ import java.util.Objects;
 
     /**
      * Instantiates a new Packaging object.
+     *
      * @param material - the Material of the package
      */
     public Packaging(Material material) {
@@ -29,14 +30,15 @@ import java.util.Objects;
     }
 
     /**
-     * Returns whether the given item will fit in this packaging.
-     *
-     * @param item the item to test fit for
-     * @return whether the item will fit in this packaging
+     * @param item
+     * @return
      */
+
     public abstract boolean canFitItem(Item item);
+
     /**
      * Returns the mass of the packaging in grams. The packaging weighs 1 gram per square centimeter.
+     *
      * @return the mass of the packaging
      */
     public abstract BigDecimal getMass();
