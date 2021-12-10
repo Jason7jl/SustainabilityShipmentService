@@ -31,12 +31,14 @@ public abstract class Packaging {
 
     /**
      * @param item - an item
+     * @return boolean - a return
      */
 
     public abstract boolean canFitItem(Item item);
 
     /**
      * Returns the mass of the packaging in grams. The packaging weighs 1 gram per square centimeter.
+     * @return BigDecimal - a return
      */
     public abstract BigDecimal getMass();
 
