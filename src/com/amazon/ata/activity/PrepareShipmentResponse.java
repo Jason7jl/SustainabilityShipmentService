@@ -22,9 +22,9 @@ public class PrepareShipmentResponse {
 
     /**
      *
-     * @param item
-     * @param packaging
-     * @param fulfillmentCenter
+     * @param item - an item
+     * @param packaging - a packiging
+     * @param fulfillmentCenter - a fulfillmentCenter
      */
     public PrepareShipmentResponse(Item item, Packaging packaging, FulfillmentCenter fulfillmentCenter) {
         this.item = item;

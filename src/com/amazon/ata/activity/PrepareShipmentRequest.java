@@ -52,12 +52,12 @@ public class PrepareShipmentRequest {
 
     /**
      *
-     * @param asin
-     * @param description
-     * @param length
-     * @param width
-     * @param height
-     * @param fcCode
+     * @param asin - an asin
+     * @param description - a description
+     * @param length - a length
+     * @param width - a width
+     * @param height - a heigth
+     * @param fcCode - a fcCode
      */
     public PrepareShipmentRequest(String asin, String description, BigDecimal length, BigDecimal width,
                                   BigDecimal height, String fcCode) {
@@ -71,7 +71,7 @@ public class PrepareShipmentRequest {
 
     /**
      *
-     * @param builder
+     * @param builder a builber
      */
     public PrepareShipmentRequest(Builder builder) {
         this.asin = builder.asin;

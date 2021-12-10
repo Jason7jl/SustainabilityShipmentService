@@ -52,8 +52,8 @@ public class Box extends Packaging {
 
     /**
      *
-     * @param item
-     * @return
+     * @param item -  an item
+     * @return - a return
      */
     @Override
     public boolean canFitItem(Item item) {
@@ -64,7 +64,7 @@ public class Box extends Packaging {
 
     /**
      *
-     * @return
+     * @return - a return
      */
     @Override
     public BigDecimal getMass() {
@@ -80,8 +80,12 @@ public class Box extends Packaging {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) {return true;}
-        if (o == null || getClass() != o.getClass()) {return false;}
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
         Box box = (Box) o;
         return getLength().equals(box.getLength()) && getWidth()
                 .equals(box.getWidth()) && getHeight()
