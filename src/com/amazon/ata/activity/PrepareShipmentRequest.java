@@ -232,8 +232,8 @@ public class PrepareShipmentRequest {
         * @param fcCode the {@code fcCode} to set
         * @return a reference to this Builder
         */
-        public Builder withFcCode(String fcCode) {
-            this.fcCode = fcCode;
+        public Builder withFcCode(String fCode) {
+            this.fcCode = fCode;
             return this;
         }
 

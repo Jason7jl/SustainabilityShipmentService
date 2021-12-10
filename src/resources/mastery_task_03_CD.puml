@@ -31,6 +31,6 @@ enum Material {
 
 
 Packaging *- Material
-Packaging <|-- PackagingBox
-Packaging <|-- PackagingPolyBag
+Packaging <|-- Box
+Packaging <|-- PolyBag
 @enduml

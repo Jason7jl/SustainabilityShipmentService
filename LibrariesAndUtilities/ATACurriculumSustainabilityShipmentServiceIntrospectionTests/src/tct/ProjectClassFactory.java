@@ -7,7 +7,7 @@ import com.amazon.ata.test.reflect.NoClassFoundException;
  * Finds classes within the project and can instantiate them.
  */
 public class ProjectClassFactory {
-    private static final String PACKAGE = "com.amazon.atacurriculumsustainabilityshipmentservicelambda.";
+    private static final String PACKAGE = "com.amazon.ata.";
 
     private ProjectClassFactory() {}
 

@@ -3,7 +3,7 @@ package com.amazon.ata.types;
 import java.math.BigDecimal;
 import java.util.Objects;
 
-public class Box extends Packaging{
+public class Box extends Packaging {
     /**
      * This packaging's length.
      */
@@ -49,6 +49,7 @@ public class Box extends Packaging{
     public BigDecimal getHeight() {
         return height;
     }
+
     public boolean canFitItem(Item item) {
         return this.length.compareTo(item.getLength()) > 0 &&
                 this.width.compareTo(item.getWidth()) > 0 &&
