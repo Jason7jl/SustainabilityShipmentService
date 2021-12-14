@@ -1,6 +1,5 @@
 package com.amazon.ata.cost;
 
-import com.amazon.ata.cost.CostStrategy;
 import com.amazon.ata.types.Material;
 import com.amazon.ata.types.Packaging;
 import com.amazon.ata.types.ShipmentCost;

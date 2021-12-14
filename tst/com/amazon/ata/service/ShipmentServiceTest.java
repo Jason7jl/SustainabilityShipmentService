@@ -44,29 +44,33 @@ class ShipmentServiceTest {
     }
 
     @Test
-    void findBestShipmentOption_existentFCAndItemCannotFit_returnsShipmentOption() {
+    void findBestShipmentOption_existentFCAndItemCannotFit_returnsShipmentOptionWithNullPackaging() {
         // GIVEN & WHEN
         ShipmentOption shipmentOption = shipmentService.findShipmentOption(largeItem, existentFC);
+        ShipmentOption duplicateShipmentOption = ShipmentOption.builder().build();
 
         // THEN
-        assertNull(shipmentOption);
+        assertEquals(shipmentOption.getClass(), duplicateShipmentOption.getClass());
+        assertNull(duplicateShipmentOption.getPackaging());
     }
 
     @Test
     void findBestShipmentOption_nonExistentFCAndItemCanFit_returnsShipmentOption() {
         // GIVEN & WHEN
-        ShipmentOption shipmentOption = shipmentService.findShipmentOption(smallItem, nonExistentFC);
 
         // THEN
-        assertNull(shipmentOption);
+        assertThrows(RuntimeException.class, () ->{
+            shipmentService.findShipmentOption(smallItem, nonExistentFC);
+        });
     }
 
     @Test
     void findBestShipmentOption_nonExistentFCAndItemCannotFit_returnsShipmentOption() {
         // GIVEN & WHEN
-        ShipmentOption shipmentOption = shipmentService.findShipmentOption(largeItem, nonExistentFC);
 
         // THEN
-        assertNull(shipmentOption);
+        assertThrows(RuntimeException.class, () ->{
+            shipmentService.findShipmentOption(smallItem, nonExistentFC);
+        });
     }
 }
