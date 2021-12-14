@@ -11,7 +11,6 @@ import com.amazon.ata.types.ShipmentOption;
 
 import java.util.*;
 
-
 /**
  * Access data for which packaging is available at which fulfillment center.
  */
@@ -25,18 +24,16 @@ public class PackagingDAO {
      *
      * @param datastore - a datastore
      */
+
     public PackagingDAO(PackagingDatastore datastore) {
-        this.fcPackagingOptions = new HashMap<FulfillmentCenter, Set<FcPackagingOption>>();
+        this.fcPackagingOptions = new HashMap<>();
         for (FcPackagingOption fcPackagingOption : datastore.getFcPackagingOptions()) {
             Set<FcPackagingOption> fcSet = new HashSet<>();
             if (fcPackagingOptions.containsKey(fcPackagingOption.getFulfillmentCenter())) {
                 fcSet = fcPackagingOptions.get(fcPackagingOption.getFulfillmentCenter());
-                fcSet.add(fcPackagingOption);
-                fcPackagingOptions.put(fcPackagingOption.getFulfillmentCenter(), fcSet);
-            } else {
-                fcSet.add(fcPackagingOption);
-                fcPackagingOptions.put(fcPackagingOption.getFulfillmentCenter(), fcSet);
             }
+            fcSet.add(fcPackagingOption);
+            fcPackagingOptions.put(fcPackagingOption.getFulfillmentCenter(), fcSet);
         }
     }
 

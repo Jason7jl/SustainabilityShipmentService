@@ -32,7 +32,18 @@ public class PackagingDatastore {
             createFcPackagingBox("PDX1", Material.CORRUGATE, "60", "60", "60"),
             createFcPackagingBox("PDX1", Material.CORRUGATE, "60", "60", "60"),
             createFcPackagingPolyBag("IAD2", Material.LAMINATED_PLASTIC, "2000"),
-            createFcPackagingPolyBag("IAD2", Material.LAMINATED_PLASTIC, "10000")
+            createFcPackagingPolyBag("IAD2", Material.LAMINATED_PLASTIC, "10000"),
+            createFcPackagingPolyBag("IAD2", Material.LAMINATED_PLASTIC, "5000"),
+            createFcPackagingPolyBag("YOW4", Material.LAMINATED_PLASTIC, "2000"),
+            createFcPackagingPolyBag("YOW4", Material.LAMINATED_PLASTIC,"5000"),
+            createFcPackagingPolyBag("YOW4", Material.LAMINATED_PLASTIC,"10000"),
+            createFcPackagingPolyBag("IND1", Material.LAMINATED_PLASTIC,"2000"),
+            createFcPackagingPolyBag("IND1", Material.LAMINATED_PLASTIC,"5000"),
+            createFcPackagingPolyBag("ABE2", Material.LAMINATED_PLASTIC,"2000"),
+            createFcPackagingPolyBag("ABE2", Material.LAMINATED_PLASTIC,"6000"),
+            createFcPackagingPolyBag("PDX1", Material.LAMINATED_PLASTIC,"5000"),
+            createFcPackagingPolyBag("PDX1", Material.LAMINATED_PLASTIC,"10000"),
+            createFcPackagingPolyBag("YOW4", Material.LAMINATED_PLASTIC,"5000")
     );
 
 

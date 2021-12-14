@@ -1,0 +1,34 @@
+@startuml
+title  Cost Strategy
+
+'https://tiny.amazon.com/vjm4xbw7/plancorpamazplanformencohtml
+
+interface CostStrategy<<interface>> {
+  +getCost(ShipmentOption): ShipmentCost
+}
+
+class MonetaryCostStrategy {
+  -LABOR_COST: BigDecimal
+  -materialCostPerGram: Map<>()
+  +getCost(): ShipmentCost
+}
+
+class CarbonCostStrategy {
+  -carbonCostPerGram: Map<>()
+  +getCost(): ShipmentCost
+}
+
+class WeightedCostStrategy {
+  -carbonCostStrategy: CarbonCostStrategy
+  -monetaryCostStrategy: MonetaryCostStrategy
+  +getCost(): ShipmentCost
+  }
+
+
+CostStrategy <|.. MonetaryCostStrategy
+CostStrategy <|.. CarbonCostStrategy
+CostStrategy <|.. WeightedCostStrategy
+WeightedCostStrategy <|.. MonetaryCostStrategy
+WeightedCostStrategy <|.. CarbonCostStrategy
+
+@enduml
