@@ -17,6 +17,9 @@ public class CarbonCostStrategy implements CostStrategy {
 
     private final Map<Material, BigDecimal> carbonUnitsPerGram;
 
+    /**
+     * Initializes a CarbonCostStrategy,
+     */
     public CarbonCostStrategy() {
         carbonUnitsPerGram = new HashMap<>();
         carbonUnitsPerGram.put(Material.CORRUGATE, BigDecimal.valueOf(.017));

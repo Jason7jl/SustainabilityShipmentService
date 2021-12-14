@@ -1,5 +1,6 @@
 package com.amazon.ata;
 
+import com.amazon.ata.cost.CarbonCostStrategy;
 import com.amazon.ata.cost.CostStrategy;
 import com.amazon.ata.cost.MonetaryCostStrategy;
 import com.amazon.ata.cost.WeightedCostStrategy;
@@ -20,6 +21,7 @@ public class App {
     }
 
     private static CostStrategy getCostStrategy() {
+
         return new WeightedCostStrategy();
     }
 

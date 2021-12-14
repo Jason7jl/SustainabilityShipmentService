@@ -6,7 +6,7 @@ import com.amazon.ata.types.ShipmentOption;
 import java.math.BigDecimal;
 
 /**
- * A strategy to calculate the cost of a ShipmentOption based on its dollar cost.
+ * A strategy to calculate the cost of a ShipmentOption based on Coststrategy.
  */
 public class WeightedCostStrategy implements CostStrategy {
 
@@ -15,7 +15,7 @@ public class WeightedCostStrategy implements CostStrategy {
 
     public WeightedCostStrategy(){}
     /**
-     * Initializes a MonetaryCostStrategy.
+     * Initializes a WeightedCostStrategy.
      */
     public WeightedCostStrategy(MonetaryCostStrategy monetaryCostStrategy, CarbonCostStrategy carbonCostStrategy) {
         this.monetaryCostStrategy = monetaryCostStrategy;
@@ -24,11 +24,9 @@ public class WeightedCostStrategy implements CostStrategy {
 
     @Override
     public ShipmentCost getCost(ShipmentOption shipmentOption) {
-        ShipmentCost carbonShipmentCost = carbonCostStrategy.getCost(shipmentOption);
-        ShipmentCost monetaryShipmentCost = monetaryCostStrategy.getCost(shipmentOption);
 
-        BigDecimal monetaryCost = monetaryShipmentCost.getCost().multiply(BigDecimal.valueOf(.80));
-        BigDecimal carbonCost = carbonShipmentCost.getCost().multiply(BigDecimal.valueOf(.20));
+        BigDecimal monetaryCost = monetaryCostStrategy.getCost(shipmentOption).getCost().multiply(BigDecimal.valueOf(.80));
+        BigDecimal carbonCost = carbonCostStrategy.getCost(shipmentOption).getCost().multiply(BigDecimal.valueOf(.20));
 
         BigDecimal totalCost = BigDecimal.valueOf(monetaryCost.doubleValue() + carbonCost.doubleValue());
 
