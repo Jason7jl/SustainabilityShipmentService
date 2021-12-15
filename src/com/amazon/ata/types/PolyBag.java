@@ -7,9 +7,8 @@ public class PolyBag extends Packaging {
     private BigDecimal volume;
 
     /**
-     *
-     * @param material  a material
-     * @param volume a volume
+     * @param material a material
+     * @param volume   a volume
      */
     public PolyBag(Material material, BigDecimal volume) {
         super(material);
@@ -22,7 +21,9 @@ public class PolyBag extends Packaging {
 
     @Override
     public boolean canFitItem(Item item) {
-        return this.volume.compareTo(item.getHeight().multiply(item.getLength().multiply(item.getWidth()))) > 0;
+        return this.volume.compareTo(item.getHeight()
+                        .multiply(item.getLength()
+                        .multiply(item.getWidth()))) > 0;
     }
 
     @Override
