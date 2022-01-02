@@ -23,9 +23,9 @@ public class FcPackagingOption {
      * @param fulfillmentCenter - the FC where the packaging Option is available
      * @param packaging - the packaging option available at the provided FC
      */
-    public FcPackagingOption(FulfillmentCenter fulfillmentCenter, Packaging packaging) {
+    public FcPackagingOption(FulfillmentCenter fulfillmentCenter, Packaging packagin) {
         this.fulfillmentCenter = fulfillmentCenter;
-        this.packaging = packaging;
+        this.packaging = packagin;
     }
 
     public FulfillmentCenter getFulfillmentCenter() {

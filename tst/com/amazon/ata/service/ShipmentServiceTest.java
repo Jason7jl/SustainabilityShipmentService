@@ -126,6 +126,6 @@ class ShipmentServiceTest {
         // WHEN & THEN
         assertThrows(RuntimeException.class, () -> {
             shipmentService.findShipmentOption(largeItem, nonExistentFC);
-        }, "WHEN NOFC EXISTS and the item cannot fit, A RUNTIME SHOULD BE THROWN");
+        }, "WHEN NO FC EXISTS and the item cannot fit, A RUNTIME SHOULD BE THROWN");
     }
 }
