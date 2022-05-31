@@ -100,7 +100,7 @@ recommendation back to the associate in the FC who is packing the item.
 You will update the service to support different packaging types, and to also consider sustainability, not just
 monetary cost, when choosing the best shipment option.
 
-## Project Preparedness Tasks
+## Project Tasks
 
 We’re taking our first steps in native AWS with this project, so first an overview.
 
