@@ -1,49 +1,5 @@
-# Unit 3 Project: Sustainable Packaging
+# Sustainable Packaging Calculator
 
-* * *
-
-## Preliminaries: Been Here, Got the T-Shirt
-
-You learned about how our projects are structured and work in the Unit 1 Project.
-
-The Unit 3 project will be largely the same: we’ll still have Project Preparedness Tasks (PPTs) and Project Mastery
-Tasks (MTs) that we check for completion and correctness with Task Completion Tests (TCTs).
-
-There will also be a few differences.
-
-### Welcome to the Cloud
-In Unit 3 we’ll start **deploying our code to AWS**. We will still develop and run code locally, but our code
-will also live in the cloud! This means that someone or something, a person or another team's code, can interact with
-your service. Think about pictures that we have on our phones. When they get added to the cloud, we can share them
-with other people. Other people can now see or use our photos, but they don't need our phones to do it. This is similar
-to how teams at Amazon make their services available for customers to use. They put their code in a shared place, and
-then invite customers to use it.
-
-### Local Code Coverage Check
-Just like in last unit, a couple checks will run on your code after it has been pushed and builds into the version set.
-
-### Ambiguity, Complexity, and Scope.
-We’re notching up the ambiguity in this unit's project. You'll notice that in the mastery tasks we will not be as
-explicit about the exact implementation details. Remember, **we value success as a collaborative
-effort**, so **ask and answer questions** amongst your peers and in Office Hours (do not make assumptions!). Coincidentally, developers
-use these same collaborative skills every day, so you’ll be getting good practice for when you graduate. Complexity and
-scope will also be increased in this project, but not hugely so.
-
-&nbsp;
-
-## Unit 3 Project Progress and Tracking
-
-### Doneness checklist
-
-You're done with this project when you've:
-
-☐ All Task Completion Tests are passing
-
-☐ Code Coverage Check passing
-
-☐ Submitted Project Reflection response in Canvas
-
-&nbsp;
 
 ## The Problem: Insisting on the Highest Packaging Standards
 
@@ -188,26 +144,4 @@ locally for testing.
 
 To make use of these benefits, the `ShipmentService` runs on Lambda, so you’re going to get first-first hand experience
 running a Lambda service!
-## Project Mastery Tasks
 
-These tasks are assigned in the appropriate module of the Sprint.
-
-Unlike other units, not all Mastery Tasks apply to the Unit Project here in Unit 3.  Mastery Tasks 1 and 2 provide you with some experience and skills you may use when appropriate in this and subsequent units.  Therefore the running, testing and grading of Mastery Tasks 1 and 2 are different that for the rest of the unit.
-
-Here is a summary of the Mastery Tasks and where they will be assigned:
-
-**Mastery Task 1: Testing the Waters** - Sprint 1, Module 2 - Overview of Remote Debuggung
-
-**Mastery Task 2: That Cloud Looks Like a Log** - Sprint 1, Module 2 - Logging to the Cloud
-
-**Mastery Task 3: Time is Marching On** - Sprint 1, Module 4 - Inheritance and Polymorphism
-
-**Mastery Task 4: Time is Still Marching On** - Sprint 2, Module 3 - Maps
-
-**Mastery Task 5: The Cost of Progress** - Sprint 2, Module 3 - Designing with Composition
-
-**Mastery Task 6: I Fits, I Sits** - Sprint 3, Module 1 - Exception Handling
-
-**Mastery Task 7: We Will Mock You** - Sprint 3, Module 3 - Mocking
-
-### Remember: Smile when you code! ###
